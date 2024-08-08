@@ -17,6 +17,7 @@ in the [6TRON](https://6tron.io) project.
 - [Zest_Interface_Ethernet](https://github.com/catie-aq/zephyr_zest-interface-ethernet)
 - [Zest_Radio_GNSS](https://github.com/catie-aq/zephyr_zest-radio-gnss)
 - [Zest_Radio_LoRa868](https://github.com/catie-aq/zephyr_zest-radio-lora868)
+- [Zest_RTC_RV-8803-C7](https://github.com/catie-aq/zephyr_zest-rtc-rv-8803-c7)
 - [Zest_Sensor_IMU](https://github.com/catie-aq/zephyr_zest-sensor-imu)
 - [Zest_Sensor_P-T-RH](https://github.com/catie-aq/zephyr_zest-sensor-p-t-rh)
 
@@ -30,6 +31,7 @@ in the [6TRON](https://6tron.io) project.
 - [AMS AS621X](https://github.com/catie-aq/zephyr_ams-as621x)
 - [Honeywell HPMA115](https://github.com/catie-aq/zephyr_honeywell-hpma115)
 - [Microchip MCP3425](https://github.com/catie-aq/zephyr_microchip-mcp3425)
+- [Micro Crystal RV-8803-C7](https://github.com/catie-aq/zephyr_microcrystal-rv-8803-c7)
 - [Omron 2SMPB 02E](https://github.com/catie-aq/zephyr_omron-2smpb-02e)
 - [Sensirion SCD4X](https://github.com/catie-aq/zephyr_sensirion-scd4x)
 - [TE Connectivity HTU21D](https://github.com/catie-aq/zephyr_te-connectivity-htu21d)
