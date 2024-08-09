@@ -63,7 +63,7 @@ manifest:
       path: 6tron/zest-radio-lora868
     - name: zest-rtc-rv-8803-c7
       repo-path: zephyr_zest-rtc-rv-8803-c7
-      revision: 985a7f42cd167e0145da5fd552f8409b35f5661a
+      revision: 6933671f3e97c7f8dac69e7185451518e7438a0b
       path: 6tron/zest-rtc-rv-8803-c7
     - name: zest-sensor-imu
       repo-path: zephyr_zest-sensor-imu
