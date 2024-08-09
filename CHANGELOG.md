@@ -5,10 +5,10 @@
 ### Added
 
 - Add support for Z_Motion.
-- Add support for Micro Crystal AG RV-8803-C7 rtc.
+- Add support for Micro Crystal AG RV-8803 RTC.
 - Add support for shield Zest_RTC_RV-8803-C7.
 
-## [3.6.0+202407][3.6.0+202407] - 20240703
+## [3.6.0+202407] - 20240703
 
 ### Added
 
@@ -28,7 +28,7 @@
 - Fix Honeywell HPMA115 driver initialization.
 - Update pre-commit configuration for shield Zest_Radio_GNSS.
 
-## [3.6.0+202404][3.6.0+202404] - 20240426
+## [3.6.0+202404] - 20240426
 
 ### Added
 
@@ -41,7 +41,7 @@
 - Add DS18B20 temperature sensor driver to Zest_Sensor_P-T-RH.
 - Add CI to auto update the manifest.
 
-## [3.5.0+202402][3.5.0+202402] - 20240221
+## [3.5.0+202402] - 20240221
 
 _Initial release._
 
