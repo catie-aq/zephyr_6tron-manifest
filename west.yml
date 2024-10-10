@@ -12,7 +12,7 @@ manifest:
   projects:
     - name: 6tron_connector
       repo-path: zephyr_6tron-connector
-      revision: 5594403822b9a258d168df22dd35aefa06344668
+      revision: b4fb8215ce74d04cb19d30bcbc05144518f24f77
       path: 6tron/6tron_connector
 
     # ================== Zest_Core Boards ==================
@@ -22,11 +22,11 @@ manifest:
       path: 6tron/boards/zest_core_fmlr-72
     - name: zest_core_nrf52832
       repo-path: zephyr_zest-core-nrf52832
-      revision: a02aa5d1bf2ff66c4c10c3eed48b66f4d7706c1b
+      revision: 897d28e28744b4f0024df47be33358e7a7329ef9
       path: 6tron/boards/zest_core_nrf52832
     - name: zest_core_nrf5340
       repo-path: zephyr_zest-core-nrf5340
-      revision: a81fa44b6020125a00ac4d12640d035ab4d58e4b
+      revision: c8d6522aa58dea90814b048cdd51cbe9c49ad64c
       path: 6tron/boards/zest_core_nrf5340
     - name: zest_core_stm32g474ve
       repo-path: zephyr_zest-core-stm32g474ve
@@ -34,11 +34,11 @@ manifest:
       path: 6tron/boards/zest_core_stm32g474ve
     - name: zest_core_stm32h753zi
       repo-path: zephyr_zest-core-stm32h753zi
-      revision: ebee1633daf8dab287dddc3905f1db28ce0259c9
+      revision: b90c345a85dc03f6e2d4f6306f100fc3c4d150d5
       path: 6tron/boards/zest_core_stm32h753zi
     - name: zest_core_stm32l4a6rg
       repo-path: zephyr_zest-core-stm32l4a6rg
-      revision: 8af4a80b6c3b2215f13a5882c7fd714c6b264548
+      revision: 782620ec7b137b7c7166a8337333b094c5c4466a
       path: 6tron/boards/zest_core_stm32l4a6rg
     - name: zest_core_stm32l562ve
       repo-path: zephyr_zest-core-stm32l562ve
@@ -88,7 +88,7 @@ manifest:
     # ====================== Drivers =======================
     - name: ams_as621x
       repo-path: zephyr_ams-as621x
-      revision: a595722d26b1654b3caac2b2415f6ac73996a988
+      revision: 096219be378848cb9a319b27095b5db6ce2f5fac
       path: 6tron/drivers/ams_as621x
     - name: honeywell_hpma115
       repo-path: zephyr_honeywell-hpma115
