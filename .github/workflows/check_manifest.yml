@@ -80,6 +80,7 @@ jobs:
 
       - uses: catie-aq/zephyr_workflows/zephyr_init@49-use-image-including-6tron-workspace
         with:
+          manifest_path: 6tron-project
           personal_access_token: ${{ secrets.CI_6TRON_ZEPHYR_RO }}
 
       - uses: catie-aq/zephyr_workflows/zephyr_twister@49-use-image-including-6tron-workspace
@@ -142,6 +143,7 @@ jobs:
 
       - uses: catie-aq/zephyr_workflows/zephyr_init@49-use-image-including-6tron-workspace
         with:
+          manifest_path: 6tron-project
           personal_access_token: ${{ secrets.CI_6TRON_ZEPHYR_RO }}
 
       - uses: catie-aq/zephyr_workflows/zephyr_build@49-use-image-including-6tron-workspace
@@ -203,6 +205,7 @@ jobs:
 
       - uses: catie-aq/zephyr_workflows/zephyr_init@49-use-image-including-6tron-workspace
         with:
+          manifest_path: 6tron-project
           personal_access_token: ${{ secrets.CI_6TRON_ZEPHYR_RO }}
 
       - uses: catie-aq/zephyr_workflows/zephyr_twister@49-use-image-including-6tron-workspace
