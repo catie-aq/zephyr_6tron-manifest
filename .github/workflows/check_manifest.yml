@@ -16,7 +16,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          path: 6tron-workspace/6tron-project
+          path: workdir
+
+      - name: Copy west.yml
+        run: cp workdir/west.yml /6tron-workspace/6tron-project/
 
       - uses: catie-aq/zephyr_workflows/zephyr_init@49-use-image-including-6tron-workspace
         with:
@@ -57,15 +60,18 @@ jobs:
         with:
           path: workdir
 
+      - name: Copy west.yml
+        run: cp workdir/west.yml /6tron-workspace/6tron-project/
+
       - name: Update west.yml
         shell: bash
         run: |
-          sed -i -z 's|    - name: catie-6tron\n      url-base: https://github.com/catie-aq|    - name: catie-6tron\n      url-base: https://github.com/catie-aq\n    - name: zephyrproject-rtos\n      url-base: https://github.com/zephyrproject-rtos|g' workdir/west.yml
+          sed -i -z 's|    - name: catie-6tron\n      url-base: https://github.com/catie-aq|    - name: catie-6tron\n      url-base: https://github.com/catie-aq\n    - name: zephyrproject-rtos\n      url-base: https://github.com/zephyrproject-rtos|g' /6tron-workspace/6tron-project/west.yml
 
       - name: Add Zephyr to manifest (workdir/west.yml)
         shell: bash
         run: |
-          cat << EOF >> workdir/west.yml
+          cat << EOF >> /6tron-workspace/6tron-project/west.yml
               - name: zephyr
                 remote: zephyrproject-rtos
                 revision: ${{ env.ZEPHYR_VERSION }}
@@ -116,15 +122,18 @@ jobs:
         with:
           path: workdir
 
+      - name: Copy west.yml
+        run: cp workdir/west.yml /6tron-workspace/6tron-project/
+
       - name: Update west.yml
         shell: bash
         run: |
-          sed -i -z 's|    - name: catie-6tron\n      url-base: https://github.com/catie-aq|    - name: catie-6tron\n      url-base: https://github.com/catie-aq\n    - name: zephyrproject-rtos\n      url-base: https://github.com/zephyrproject-rtos|g' workdir/west.yml
+          sed -i -z 's|    - name: catie-6tron\n      url-base: https://github.com/catie-aq|    - name: catie-6tron\n      url-base: https://github.com/catie-aq\n    - name: zephyrproject-rtos\n      url-base: https://github.com/zephyrproject-rtos|g' /6tron-workspace/6tron-project/west.yml
 
-      - name: Add Zephyr to manifest (workdir/west.yml)
+      - name: Add Zephyr to manifest (/6tron-workspace/6tron-project/west.yml)
         shell: bash
         run: |
-          cat << EOF >> workdir/west.yml
+          cat << EOF >> /6tron-workspace/6tron-project/west.yml
               - name: zephyr
                 remote: zephyrproject-rtos
                 revision: ${{ env.ZEPHYR_VERSION }}
@@ -174,15 +183,18 @@ jobs:
         with:
           path: workdir
 
+      - name: Copy west.yml
+        run: cp workdir/west.yml /6tron-workspace/6tron-project/
+
       - name: Update west.yml
         shell: bash
         run: |
-          sed -i -z 's|    - name: catie-6tron\n      url-base: https://github.com/catie-aq|    - name: catie-6tron\n      url-base: https://github.com/catie-aq\n    - name: zephyrproject-rtos\n      url-base: https://github.com/zephyrproject-rtos|g' workdir/west.yml
+          sed -i -z 's|    - name: catie-6tron\n      url-base: https://github.com/catie-aq|    - name: catie-6tron\n      url-base: https://github.com/catie-aq\n    - name: zephyrproject-rtos\n      url-base: https://github.com/zephyrproject-rtos|g' /6tron-workspace/6tron-project/west.yml
 
-      - name: Add Zephyr to manifest (workdir/west.yml)
+      - name: Add Zephyr to manifest (/6tron-workspace/6tron-project/west.yml)
         shell: bash
         run: |
-          cat << EOF >> workdir/west.yml
+          cat << EOF >> /6tron-workspace/6tron-project/west.yml
               - name: zephyr
                 remote: zephyrproject-rtos
                 revision: ${{ env.ZEPHYR_VERSION }}
