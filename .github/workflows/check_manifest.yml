@@ -10,7 +10,7 @@ jobs:
   check-manifest:
     runs-on: sonu-github-arc
     container:
-      image: ghcr.io/catie-aq/zephyr_docker:v0.26.14
+      image: ghcr.io/catie-aq/zephyr_docker:v0.27.4-workspace
 
     steps:
       - name: Checkout repository
@@ -18,18 +18,22 @@ jobs:
         with:
           path: workdir
 
-      - uses: catie-aq/zephyr_workflows/zephyr_init@main
+      - name: Copy west.yml
+        run: cp workdir/west.yml /6tron-workspace/6tron-project/
+
+      - uses: catie-aq/zephyr_workflows/zephyr_init@49-use-image-including-6tron-workspace
         with:
+          manifest_path: 6tron-project
           personal_access_token: ${{ secrets.PAT }}
 
   core:
     needs: check-manifest
     runs-on: sonu-github-arc
     container:
-      image: ghcr.io/catie-aq/zephyr_docker:v0.26.14
+      image: ghcr.io/catie-aq/zephyr_docker:v0.27.4-workspace
     env:
       CMAKE_PREFIX_PATH: /opt/toolchains
-      ZEPHYR_VERSION: "v3.7.0"
+      ZEPHYR_VERSION: "v4.0.0"
       TWISTER_OPTIONS: "--force-color --inline-logs -v --clobber-output"
       TAGS: "DAC,ieee802154,counter,gpio,serial,i2c,i3c,UART,qspi,pwm,button,usb,spi,lora,i2s,mipi_dbi,wifi,ethernet,nvs,uart,dma,clock_control,usbc,watchdog,dac,w1,input,peci,can,bluetooth,adc,clock"
 
@@ -56,26 +60,30 @@ jobs:
         with:
           path: workdir
 
+      - name: Copy west.yml
+        run: cp workdir/west.yml /6tron-workspace/6tron-project/
+
       - name: Update west.yml
         shell: bash
         run: |
-          sed -i -z 's|    - name: catie-6tron\n      url-base: https://github.com/catie-aq|    - name: catie-6tron\n      url-base: https://github.com/catie-aq\n    - name: zephyrproject-rtos\n      url-base: https://github.com/zephyrproject-rtos|g' workdir/west.yml
+          sed -i -z 's|    - name: catie-6tron\n      url-base: https://github.com/catie-aq|    - name: catie-6tron\n      url-base: https://github.com/catie-aq\n    - name: zephyrproject-rtos\n      url-base: https://github.com/zephyrproject-rtos|g' /6tron-workspace/6tron-project/west.yml
 
       - name: Add Zephyr to manifest (workdir/west.yml)
         shell: bash
         run: |
-          cat << EOF >> workdir/west.yml
+          cat << EOF >> /6tron-workspace/6tron-project/west.yml
               - name: zephyr
                 remote: zephyrproject-rtos
                 revision: ${{ env.ZEPHYR_VERSION }}
                 import: true
           EOF
 
-      - uses: catie-aq/zephyr_workflows/zephyr_init@main
+      - uses: catie-aq/zephyr_workflows/zephyr_init@49-use-image-including-6tron-workspace
         with:
+          manifest_path: 6tron-project
           personal_access_token: ${{ secrets.CI_6TRON_ZEPHYR_RO }}
 
-      - uses: catie-aq/zephyr_workflows/zephyr_twister@main
+      - uses: catie-aq/zephyr_workflows/zephyr_twister@49-use-image-including-6tron-workspace
         with:
           board: ${{ matrix.boards }}
           options: ${{ env.TWISTER_OPTIONS }}
@@ -85,10 +93,10 @@ jobs:
     needs: check-manifest
     runs-on: sonu-github-arc
     container:
-      image: ghcr.io/catie-aq/zephyr_docker:v0.26.14
+      image: ghcr.io/catie-aq/zephyr_docker:v0.27.4-workspace
     env:
       CMAKE_PREFIX_PATH: /opt/toolchains
-      ZEPHYR_VERSION: "v3.7.0"
+      ZEPHYR_VERSION: "v4.0.0"
 
     strategy:
       matrix:
@@ -115,26 +123,30 @@ jobs:
         with:
           path: workdir
 
+      - name: Copy west.yml
+        run: cp workdir/west.yml /6tron-workspace/6tron-project/
+
       - name: Update west.yml
         shell: bash
         run: |
-          sed -i -z 's|    - name: catie-6tron\n      url-base: https://github.com/catie-aq|    - name: catie-6tron\n      url-base: https://github.com/catie-aq\n    - name: zephyrproject-rtos\n      url-base: https://github.com/zephyrproject-rtos|g' workdir/west.yml
+          sed -i -z 's|    - name: catie-6tron\n      url-base: https://github.com/catie-aq|    - name: catie-6tron\n      url-base: https://github.com/catie-aq\n    - name: zephyrproject-rtos\n      url-base: https://github.com/zephyrproject-rtos|g' /6tron-workspace/6tron-project/west.yml
 
-      - name: Add Zephyr to manifest (workdir/west.yml)
+      - name: Add Zephyr to manifest (/6tron-workspace/6tron-project/west.yml)
         shell: bash
         run: |
-          cat << EOF >> workdir/west.yml
+          cat << EOF >> /6tron-workspace/6tron-project/west.yml
               - name: zephyr
                 remote: zephyrproject-rtos
                 revision: ${{ env.ZEPHYR_VERSION }}
                 import: true
           EOF
 
-      - uses: catie-aq/zephyr_workflows/zephyr_init@main
+      - uses: catie-aq/zephyr_workflows/zephyr_init@49-use-image-including-6tron-workspace
         with:
+          manifest_path: 6tron-project
           personal_access_token: ${{ secrets.CI_6TRON_ZEPHYR_RO }}
 
-      - uses: catie-aq/zephyr_workflows/zephyr_build@main
+      - uses: catie-aq/zephyr_workflows/zephyr_build@49-use-image-including-6tron-workspace
         with:
           board: zest_core_stm32l4a6rg
           application: zephyr/samples/basic/blinky
@@ -144,10 +156,10 @@ jobs:
     needs: check-manifest
     runs-on: sonu-github-arc
     container:
-      image: ghcr.io/catie-aq/zephyr_docker:v0.26.14
+      image: ghcr.io/catie-aq/zephyr_docker:v0.27.4-workspace
     env:
       CMAKE_PREFIX_PATH: /opt/toolchains
-      ZEPHYR_VERSION: "v3.7.0"
+      ZEPHYR_VERSION: "v4.0.0"
       TWISTER_OPTIONS: "--force-color --inline-logs -v --clobber-output --integration"
 
     strategy:
@@ -173,26 +185,30 @@ jobs:
         with:
           path: workdir
 
+      - name: Copy west.yml
+        run: cp workdir/west.yml /6tron-workspace/6tron-project/
+
       - name: Update west.yml
         shell: bash
         run: |
-          sed -i -z 's|    - name: catie-6tron\n      url-base: https://github.com/catie-aq|    - name: catie-6tron\n      url-base: https://github.com/catie-aq\n    - name: zephyrproject-rtos\n      url-base: https://github.com/zephyrproject-rtos|g' workdir/west.yml
+          sed -i -z 's|    - name: catie-6tron\n      url-base: https://github.com/catie-aq|    - name: catie-6tron\n      url-base: https://github.com/catie-aq\n    - name: zephyrproject-rtos\n      url-base: https://github.com/zephyrproject-rtos|g' /6tron-workspace/6tron-project/west.yml
 
-      - name: Add Zephyr to manifest (workdir/west.yml)
+      - name: Add Zephyr to manifest (/6tron-workspace/6tron-project/west.yml)
         shell: bash
         run: |
-          cat << EOF >> workdir/west.yml
+          cat << EOF >> /6tron-workspace/6tron-project/west.yml
               - name: zephyr
                 remote: zephyrproject-rtos
                 revision: ${{ env.ZEPHYR_VERSION }}
                 import: true
           EOF
 
-      - uses: catie-aq/zephyr_workflows/zephyr_init@main
+      - uses: catie-aq/zephyr_workflows/zephyr_init@49-use-image-including-6tron-workspace
         with:
+          manifest_path: 6tron-project
           personal_access_token: ${{ secrets.CI_6TRON_ZEPHYR_RO }}
 
-      - uses: catie-aq/zephyr_workflows/zephyr_twister@main
+      - uses: catie-aq/zephyr_workflows/zephyr_twister@49-use-image-including-6tron-workspace
         with:
           path: 6tron/drivers/${{ matrix.drivers }}/samples
           options: ${{ env.TWISTER_OPTIONS }}
