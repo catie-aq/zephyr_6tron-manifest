@@ -10,7 +10,7 @@ jobs:
   check-manifest:
     runs-on: sonu-github-arc
     container:
-      image: ghcr.io/catie-aq/zephyr_docker:v0.27.4
+      image: ghcr.io/catie-aq/zephyr_docker:v0.27.4-workspace
 
     steps:
       - name: Checkout repository
@@ -18,7 +18,7 @@ jobs:
         with:
           path: workdir
 
-      - uses: catie-aq/zephyr_workflows/zephyr_init@main
+      - uses: catie-aq/zephyr_workflows/zephyr_init@49-use-image-including-6tron-workspace
         with:
           personal_access_token: ${{ secrets.PAT }}
 
@@ -26,7 +26,7 @@ jobs:
     needs: check-manifest
     runs-on: sonu-github-arc
     container:
-      image: ghcr.io/catie-aq/zephyr_docker:v0.27.4
+      image: ghcr.io/catie-aq/zephyr_docker:v0.27.4-workspace
     env:
       CMAKE_PREFIX_PATH: /opt/toolchains
       ZEPHYR_VERSION: "v4.0.0"
@@ -71,11 +71,11 @@ jobs:
                 import: true
           EOF
 
-      - uses: catie-aq/zephyr_workflows/zephyr_init@main
+      - uses: catie-aq/zephyr_workflows/zephyr_init@49-use-image-including-6tron-workspace
         with:
           personal_access_token: ${{ secrets.CI_6TRON_ZEPHYR_RO }}
 
-      - uses: catie-aq/zephyr_workflows/zephyr_twister@main
+      - uses: catie-aq/zephyr_workflows/zephyr_twister@49-use-image-including-6tron-workspace
         with:
           board: ${{ matrix.boards }}
           options: ${{ env.TWISTER_OPTIONS }}
@@ -85,7 +85,7 @@ jobs:
     needs: check-manifest
     runs-on: sonu-github-arc
     container:
-      image: ghcr.io/catie-aq/zephyr_docker:v0.27.4
+      image: ghcr.io/catie-aq/zephyr_docker:v0.27.4-workspace
     env:
       CMAKE_PREFIX_PATH: /opt/toolchains
       ZEPHYR_VERSION: "v4.0.0"
@@ -130,11 +130,11 @@ jobs:
                 import: true
           EOF
 
-      - uses: catie-aq/zephyr_workflows/zephyr_init@main
+      - uses: catie-aq/zephyr_workflows/zephyr_init@49-use-image-including-6tron-workspace
         with:
           personal_access_token: ${{ secrets.CI_6TRON_ZEPHYR_RO }}
 
-      - uses: catie-aq/zephyr_workflows/zephyr_build@main
+      - uses: catie-aq/zephyr_workflows/zephyr_build@49-use-image-including-6tron-workspace
         with:
           board: zest_core_stm32l4a6rg
           application: zephyr/samples/basic/blinky
@@ -144,7 +144,7 @@ jobs:
     needs: check-manifest
     runs-on: sonu-github-arc
     container:
-      image: ghcr.io/catie-aq/zephyr_docker:v0.27.4
+      image: ghcr.io/catie-aq/zephyr_docker:v0.27.4-workspace
     env:
       CMAKE_PREFIX_PATH: /opt/toolchains
       ZEPHYR_VERSION: "v4.0.0"
@@ -188,11 +188,11 @@ jobs:
                 import: true
           EOF
 
-      - uses: catie-aq/zephyr_workflows/zephyr_init@main
+      - uses: catie-aq/zephyr_workflows/zephyr_init@49-use-image-including-6tron-workspace
         with:
           personal_access_token: ${{ secrets.CI_6TRON_ZEPHYR_RO }}
 
-      - uses: catie-aq/zephyr_workflows/zephyr_twister@main
+      - uses: catie-aq/zephyr_workflows/zephyr_twister@49-use-image-including-6tron-workspace
         with:
           path: 6tron/drivers/${{ matrix.drivers }}/samples
           options: ${{ env.TWISTER_OPTIONS }}
