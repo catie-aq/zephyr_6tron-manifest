@@ -146,11 +146,11 @@ jobs:
           manifest_path: 6tron-project
           personal_access_token: ${{ secrets.CI_6TRON_ZEPHYR_RO }}
 
-      - uses: catie-aq/zephyr_workflows/zephyr_build@49-use-image-including-6tron-workspace
-        with:
-          board: zest_core_stm32l4a6rg
-          application: zephyr/samples/basic/blinky
-          shield: ${{ matrix.shields }}
+      - name: Build Zephyr Blinky with shield
+        shell: bash
+        run: |
+          cd /6tron-workspace/
+          west build -p -b zest_core_stm32l4a6rg --shield ${{ matrix.shields }} zephyr/samples/basic/blinky
 
   driver:
     needs: check-manifest
