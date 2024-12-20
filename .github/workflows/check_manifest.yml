@@ -80,6 +80,7 @@ jobs:
                     - cmsis
                     - hal_stm32
                     - hal_nordic
+                    - loramac-node
           EOF
 
       - uses: catie-aq/zephyr_workflows/zephyr_init@49-use-image-including-6tron-workspace
