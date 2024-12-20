@@ -75,7 +75,11 @@ jobs:
               - name: zephyr
                 remote: zephyrproject-rtos
                 revision: ${{ env.ZEPHYR_VERSION }}
-                import: true
+                import:
+                  name-allowlist:
+                    - cmsis
+                    - hal_stm32
+                    - hal_nordic
           EOF
 
       - uses: catie-aq/zephyr_workflows/zephyr_init@49-use-image-including-6tron-workspace
@@ -138,7 +142,11 @@ jobs:
               - name: zephyr
                 remote: zephyrproject-rtos
                 revision: ${{ env.ZEPHYR_VERSION }}
-                import: true
+                import:
+                  name-allowlist:
+                    - cmsis
+                    - hal_stm32
+                    - hal_nordic
           EOF
 
       - uses: catie-aq/zephyr_workflows/zephyr_init@49-use-image-including-6tron-workspace
@@ -200,7 +208,11 @@ jobs:
               - name: zephyr
                 remote: zephyrproject-rtos
                 revision: ${{ env.ZEPHYR_VERSION }}
-                import: true
+                import:
+                  name-allowlist:
+                    - cmsis
+                    - hal_stm32
+                    - hal_nordic
           EOF
 
       - uses: catie-aq/zephyr_workflows/zephyr_init@49-use-image-including-6tron-workspace
