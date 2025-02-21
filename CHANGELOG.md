@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [4.0.0+202502] - 20250221
+
 ### Added
 
 - Add FDCAN support for Zest_Core_STM32H753ZI.
@@ -125,3 +127,4 @@ _Initial release._
 [3.6.0+202407]: https://github.com/catie-aq/zephyr_6tron-manifest/releases/tag/v3.6.0+202407
 [3.7.0+202408]: https://github.com/catie-aq/zephyr_6tron-manifest/releases/tag/v3.7.0+202408
 [3.7.0+202412]: https://github.com/catie-aq/zephyr_6tron-manifest/releases/tag/v3.7.0+202412
+[4.0.0+202502]:https://github.com/catie-aq/zephyr_6tron-manifest/releases/tag/v4.0.0+202502
