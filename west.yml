@@ -22,7 +22,7 @@ manifest:
       path: 6tron/boards/zest_core_fmlr-72
     - name: zest_core_mtxdot
       repo-path: zephyr_zest-core-mtxdot
-      revision: e26d3ce2aca4163c67d28c95ae7212f2d592a77a
+      revision: 146594dba22f60347af56290c1f8c7cc6590e734
       path: 6tron/boards/zest_core_mtxdot
     - name: zest_core_nrf52832
       repo-path: zephyr_zest-core-nrf52832
