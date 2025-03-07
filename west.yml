@@ -162,3 +162,9 @@ manifest:
       repo-path: zephyr_ti-tsc2003
       revision: 6ce8f189e82414fd682ab09bded468e97df68a99
       path: 6tron/drivers/ti_tsc2003
+
+    # ================= Sample Examples =================
+    - name: samples
+      repo-path: zephyr_samples
+      revision: cede800a8944a60d68ceb2c6e209d6da1ab7ebf2
+      path: 6tron/samples
