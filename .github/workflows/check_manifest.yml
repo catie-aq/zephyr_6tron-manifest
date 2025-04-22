@@ -47,6 +47,8 @@ jobs:
             zest_core_stm32h753zi,
             zest_core_stm32l4a6rg,
             zest_core_stm32l562ve,
+            z_iaq,
+            z_motion,
           ]
 
     continue-on-error: true
@@ -97,6 +99,7 @@ jobs:
           [
             zest_adapter_click,
             zest_battery_lipo,
+            zest_display_lcd,
             zest_interface_ethernet,
             zest_interface_rs232,
             zest_interface_rs485,
@@ -159,12 +162,15 @@ jobs:
             ams_as621x,
             bosch_bno055,
             honeywell_hpma115,
+            ilitek_ili9163c,
             maxim_max17201,
             microchip_mcp3425,
             microcrystal_rv8803,
             omron_2smpb-02e,
+            quectel_l86,
             sensirion_scd4x,
             te-connectivity_htu21d,
+            ti_tsc2003,
           ]
 
     continue-on-error: true
