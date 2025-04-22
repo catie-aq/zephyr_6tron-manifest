@@ -10,7 +10,7 @@ jobs:
   check-manifest:
     runs-on: sonu-github-arc
     container:
-      image: ghcr.io/catie-aq/zephyr_docker:v0.27.4
+      image: ghcr.io/catie-aq/zephyr_docker:v4.0.0-202502-ci
 
     steps:
       - name: Checkout repository
@@ -26,7 +26,7 @@ jobs:
     needs: check-manifest
     runs-on: sonu-github-arc
     container:
-      image: ghcr.io/catie-aq/zephyr_docker:v0.27.4
+      image: ghcr.io/catie-aq/zephyr_docker:v4.0.0-202502-ci
     env:
       CMAKE_PREFIX_PATH: /opt/toolchains
       ZEPHYR_VERSION: "v4.0.0"
@@ -88,7 +88,7 @@ jobs:
     needs: check-manifest
     runs-on: sonu-github-arc
     container:
-      image: ghcr.io/catie-aq/zephyr_docker:v0.27.4
+      image: ghcr.io/catie-aq/zephyr_docker:v4.0.0-202502-ci
     env:
       CMAKE_PREFIX_PATH: /opt/toolchains
       ZEPHYR_VERSION: "v4.0.0"
@@ -149,7 +149,7 @@ jobs:
     needs: check-manifest
     runs-on: sonu-github-arc
     container:
-      image: ghcr.io/catie-aq/zephyr_docker:v0.27.4
+      image: ghcr.io/catie-aq/zephyr_docker:v4.0.0-202502-ci
     env:
       CMAKE_PREFIX_PATH: /opt/toolchains
       ZEPHYR_VERSION: "v4.0.0"
