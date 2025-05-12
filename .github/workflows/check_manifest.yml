@@ -33,26 +33,6 @@ jobs:
       TWISTER_OPTIONS: "--force-color --inline-logs -v --clobber-output"
       TAGS: "DAC,ieee802154,counter,gpio,serial,i2c,i3c,UART,qspi,pwm,button,usb,spi,lora,i2s,mipi_dbi,wifi,ethernet,nvs,uart,dma,clock_control,usbc,watchdog,dac,w1,input,peci,can,bluetooth,adc,clock"
 
-    strategy:
-      matrix:
-        boards:
-          [
-            zest_core_fmlr-72,
-            zest_core_mtxdot,
-            zest_core_nrf52832,
-            zest_core_nrf5340/nrf5340/cpuapp,
-            zest_core_nrf5340/nrf5340/cpuapp/ns,
-            zest_core_nrf5340/nrf5340/cpunet,
-            zest_core_stm32g474ve,
-            zest_core_stm32h753zi,
-            zest_core_stm32l4a6rg,
-            zest_core_stm32l562ve,
-            z_iaq,
-            z_motion,
-          ]
-
-    continue-on-error: true
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -87,9 +67,99 @@ jobs:
         with:
           personal_access_token: ${{ secrets.CI_6TRON_ZEPHYR_RO }}
 
-      - uses: catie-aq/zephyr_workflows/zephyr_twister@main
+      - name: Zest_Core_FMLR-72
+        uses: catie-aq/zephyr_workflows/zephyr_twister@main
+        if: always()
         with:
-          board: ${{ matrix.boards }}
+          board: "zest_core_fmlr-72"
+          options: ${{ env.TWISTER_OPTIONS }}
+          tags: ${{ env.TAGS }}
+
+      - name: Zest_Core_MTXDOT
+        uses: catie-aq/zephyr_workflows/zephyr_twister@main
+        if: always()
+        with:
+          board: "zest_core_mtxdot"
+          options: ${{ env.TWISTER_OPTIONS }}
+          tags: ${{ env.TAGS }}
+
+      - name: Zest_Core_NRF52832
+        uses: catie-aq/zephyr_workflows/zephyr_twister@main
+        if: always()
+        with:
+          board: "zest_core_nrf52832"
+          options: ${{ env.TWISTER_OPTIONS }}
+          tags: ${{ env.TAGS }}
+
+      - name: Zest_Core_NRF52840 CPUAPP
+        uses: catie-aq/zephyr_workflows/zephyr_twister@main
+        if: always()
+        with:
+          board: "zest_core_nrf5340/nrf5340/cpuapp"
+          options: ${{ env.TWISTER_OPTIONS }}
+          tags: ${{ env.TAGS }}
+
+      - name: Zest_Core_NRF52840 CPUNET NS
+        uses: catie-aq/zephyr_workflows/zephyr_twister@main
+        if: always()
+        with:
+          board: "zest_core_nrf5340/nrf5340/cpuapp/ns"
+          options: ${{ env.TWISTER_OPTIONS }}
+          tags: ${{ env.TAGS }}
+
+      - name: Zest_Core_NRF52840 CPUNET
+        uses: catie-aq/zephyr_workflows/zephyr_twister@main
+        if: always()
+        with:
+          board: "zest_core_nrf5340/nrf5340/cpunet"
+          options: ${{ env.TWISTER_OPTIONS }}
+          tags: ${{ env.TAGS }}
+
+      - name: Zest_Core_STM32G474VE
+        uses: catie-aq/zephyr_workflows/zephyr_twister@main
+        if: always()
+        with:
+          board: "zest_core_stm32g474ve"
+          options: ${{ env.TWISTER_OPTIONS }}
+          tags: ${{ env.TAGS }}
+
+      - name: Zest_Core_STM32H753ZI
+        uses: catie-aq/zephyr_workflows/zephyr_twister@main
+        if: always()
+        with:
+          board: "zest_core_stm32h753zi"
+          options: ${{ env.TWISTER_OPTIONS }}
+          tags: ${{ env.TAGS }}
+
+      - name: Zest_Core_STM32L4A6RG
+        uses: catie-aq/zephyr_workflows/zephyr_twister@main
+        if: always()
+        with:
+          board: "zest_core_stm32l4a6rg"
+          options: ${{ env.TWISTER_OPTIONS }}
+          tags: ${{ env.TAGS }}
+
+      - name: Zest_Core_STM32L562VE
+        uses: catie-aq/zephyr_workflows/zephyr_twister@main
+        if: always()
+        with:
+          board: "zest_core_stm32l562ve"
+          options: ${{ env.TWISTER_OPTIONS }}
+          tags: ${{ env.TAGS }}
+
+      - name: Z_IAQ
+        uses: catie-aq/zephyr_workflows/zephyr_twister@main
+        if: always()
+        with:
+          board: "z_iaq"
+          options: ${{ env.TWISTER_OPTIONS }}
+          tags: ${{ env.TAGS }}
+
+      - name: Z_Motion
+        uses: catie-aq/zephyr_workflows/zephyr_twister@main
+        if: always()
+        with:
+          board: "z_motion"
           options: ${{ env.TWISTER_OPTIONS }}
           tags: ${{ env.TAGS }}
 
@@ -102,27 +172,6 @@ jobs:
       CMAKE_PREFIX_PATH: /opt/toolchains
       ZEPHYR_VERSION: "v4.0.0"
 
-    strategy:
-      matrix:
-        shields:
-          [
-            zest_adapter_click,
-            zest_battery_lipo,
-            zest_display_lcd,
-            zest_interface_ethernet,
-            zest_interface_rs232,
-            zest_interface_rs485,
-            zest_radio_gnss,
-            zest_radio_lora868,
-            zest_radio_wifi,
-            zest_rtc_rv-8803-c7,
-            zest_sensor_imu,
-            zest_sensor_p-t-rh,
-            zest_storage_microsd,
-          ]
-
-    continue-on-error: true
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -151,11 +200,109 @@ jobs:
         with:
           personal_access_token: ${{ secrets.CI_6TRON_ZEPHYR_RO }}
 
-      - uses: catie-aq/zephyr_workflows/zephyr_build@main
+      - name: Zest_Adapter_Click
+        uses: catie-aq/zephyr_workflows/zephyr_build@main
+        if: always()
         with:
           board: zest_core_stm32l4a6rg
           application: zephyr/samples/basic/blinky
-          shield: ${{ matrix.shields }}
+          shield: zest_adapter_click
+
+      - name: Zest_Battery_LiPo
+        uses: catie-aq/zephyr_workflows/zephyr_build@main
+        if: always()
+        with:
+          board: zest_core_stm32l4a6rg
+          application: zephyr/samples/basic/blinky
+          shield: zest_battery_lipo
+
+      - name: Zest_Display_LCD
+        uses: catie-aq/zephyr_workflows/zephyr_build@main
+        if: always()
+        with:
+          board: zest_core_stm32l4a6rg
+          application: zephyr/samples/basic/blinky
+          shield: zest_display_lcd
+
+      - name: Zest_Interface_Ethernet
+        uses: catie-aq/zephyr_workflows/zephyr_build@main
+        if: always()
+        with:
+          board: zest_core_stm32l4a6rg
+          application: zephyr/samples/basic/blinky
+          shield: zest_interface_ethernet
+
+      - name: Zest_Interface_RS232
+        uses: catie-aq/zephyr_workflows/zephyr_build@main
+        if: always()
+        with:
+          board: zest_core_stm32l4a6rg
+          application: zephyr/samples/basic/blinky
+          shield: zest_interface_rs232
+
+      - name: Zest_Interface_RS485
+        uses: catie-aq/zephyr_workflows/zephyr_build@main
+        if: always()
+        with:
+          board: zest_core_stm32l4a6rg
+          application: zephyr/samples/basic/blinky
+          shield: zest_interface_rs485
+
+      - name: Zest_Radio_GNSS
+        uses: catie-aq/zephyr_workflows/zephyr_build@main
+        if: always()
+        with:
+          board: zest_core_stm32l4a6rg
+          application: zephyr/samples/basic/blinky
+          shield: zest_radio_gnss
+
+      - name: Zest_Radio_LoRa868
+        uses: catie-aq/zephyr_workflows/zephyr_build@main
+        if: always()
+        with:
+          board: zest_core_stm32l4a6rg
+          application: zephyr/samples/basic/blinky
+          shield: zest_radio_lora868
+
+      - name: Zest_Radio_WiFi
+        uses: catie-aq/zephyr_workflows/zephyr_build@main
+        if: always()
+        with:
+          board: zest_core_stm32l4a6rg
+          application: zephyr/samples/basic/blinky
+          shield: zest_radio_wifi
+
+      - name: Zest_RTC_RV-8803-C7
+        uses: catie-aq/zephyr_workflows/zephyr_build@main
+        if: always()
+        with:
+          board: zest_core_stm32l4a6rg
+          application: zephyr/samples/basic/blinky
+          shield: zest_rtc_rv-8803-c7
+
+      - name: Zest_Sensor_IMU
+        uses: catie-aq/zephyr_workflows/zephyr_build@main
+        if: always()
+        with:
+          board: zest_core_stm32l4a6rg
+          application: zephyr/samples/basic/blinky
+          shield: zest_sensor_imu
+
+      - name: Zest_Sensor_P-T-RH
+        uses: catie-aq/zephyr_workflows/zephyr_build@main
+        if: always()
+        with:
+          board: zest_core_stm32l4a6rg
+          application: zephyr/samples/basic/blinky
+          shield: zest_sensor_p-t-rh
+
+      - name: Zest_Storage_MicroSD
+        uses: catie-aq/zephyr_workflows/zephyr_build@main
+        if: always()
+        with:
+          board: zest_core_stm32l4a6rg
+          application: zephyr/samples/basic/blinky
+          shield: zest_storage_microsd
 
   driver:
     needs: check-manifest
@@ -167,26 +314,6 @@ jobs:
       ZEPHYR_VERSION: "v4.0.0"
       TWISTER_OPTIONS: "--force-color --inline-logs -v --clobber-output --integration"
 
-    strategy:
-      matrix:
-        drivers:
-          [
-            ams_as621x,
-            bosch_bno055,
-            honeywell_hpma115,
-            ilitek_ili9163c,
-            maxim_max17201,
-            microchip_mcp3425,
-            microcrystal_rv8803,
-            omron_2smpb-02e,
-            quectel_l86,
-            sensirion_scd4x,
-            te-connectivity_htu21d,
-            ti_tsc2003,
-          ]
-
-    continue-on-error: true
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -215,7 +342,86 @@ jobs:
         with:
           personal_access_token: ${{ secrets.CI_6TRON_ZEPHYR_RO }}
 
-      - uses: catie-aq/zephyr_workflows/zephyr_twister@main
+      - name: AMS AS621x
+        uses: catie-aq/zephyr_workflows/zephyr_twister@main
+        if: always()
         with:
-          path: 6tron/drivers/${{ matrix.drivers }}/samples
+          path: 6tron/drivers/ams_as621x/samples
+          options: ${{ env.TWISTER_OPTIONS }}
+
+      - name: Bosch BNO055
+        uses: catie-aq/zephyr_workflows/zephyr_twister@main
+        if: always()
+        with:
+          path: 6tron/drivers/bosch_bno055/samples
+          options: ${{ env.TWISTER_OPTIONS }}
+
+      - name: Honeywell HPMA115
+        uses: catie-aq/zephyr_workflows/zephyr_twister@main
+        if: always()
+        with:
+          path: 6tron/drivers/honeywell_hpma115/samples
+          options: ${{ env.TWISTER_OPTIONS }}
+
+      - name: Ilitek ILI9163C
+        uses: catie-aq/zephyr_workflows/zephyr_twister@main
+        if: always()
+        with:
+          path: 6tron/drivers/ilitek_ili9163c/samples
+          options: ${{ env.TWISTER_OPTIONS }}
+
+      - name: Maxim MAX17201
+        uses: catie-aq/zephyr_workflows/zephyr_twister@main
+        if: always()
+        with:
+          path: 6tron/drivers/maxim_max17201/samples
+          options: ${{ env.TWISTER_OPTIONS }}
+
+      - name: Microchip MCP3425
+        uses: catie-aq/zephyr_workflows/zephyr_twister@main
+        if: always()
+        with:
+          path: 6tron/drivers/microchip_mcp3425/samples
+          options: ${{ env.TWISTER_OPTIONS }}
+
+      - name: Micro Crystal RV8803
+        uses: catie-aq/zephyr_workflows/zephyr_twister@main
+        if: always()
+        with:
+          path: 6tron/drivers/microcrystal_rv8803/samples
+          options: ${{ env.TWISTER_OPTIONS }}
+
+      - name: Omron 2SMPB-02E
+        uses: catie-aq/zephyr_workflows/zephyr_twister@main
+        if: always()
+        with:
+          path: 6tron/drivers/omron_2smpb-02e/samples
+          options: ${{ env.TWISTER_OPTIONS }}
+
+      - name: Quectel L86 GNSS
+        uses: catie-aq/zephyr_workflows/zephyr_twister@main
+        if: always()
+        with:
+          path: 6tron/drivers/quectel_l86/samples
+          options: ${{ env.TWISTER_OPTIONS }}
+
+      - name: Sensirion SCD4x
+        uses: catie-aq/zephyr_workflows/zephyr_twister@main
+        if: always()
+        with:
+          path: 6tron/drivers/sensirion_scd4x/samples
+          options: ${{ env.TWISTER_OPTIONS }}
+
+      - name: TE Connectivity HTU21D
+        uses: catie-aq/zephyr_workflows/zephyr_twister@main
+        if: always()
+        with:
+          path: 6tron/drivers/te-connectivity_htu21d/samples
+          options: ${{ env.TWISTER_OPTIONS }}
+
+      - name: Texas Instrument TSC2003
+        uses: catie-aq/zephyr_workflows/zephyr_twister@main
+        if: always()
+        with:
+          path: 6tron/drivers/ti_tsc2003/samples
           options: ${{ env.TWISTER_OPTIONS }}
