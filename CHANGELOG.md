@@ -2,6 +2,22 @@
 
 ## [Unreleased]
 
+### Added
+
+- Add ability to select port for shield connection through devicetree preprocessor macros:
+    - Zest_Display_LCD
+    - Zest_Interface_RS232
+    - Zest_Interface_RS485
+    - Zest_Radio_GNSS
+    - Zest_Radio_LoRa868
+    - Zest_Sensor_P-T-RH
+    - Zes_Storage_microSD
+
+### Changed
+
+- Update Microchip MCP3425 driver API from Sensor to ADC.
+- Update Quectel L86 driver with the latest API.
+
 ## [4.0.0+202502] - 20250221
 
 ### Added
