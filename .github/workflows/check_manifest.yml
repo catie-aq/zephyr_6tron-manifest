@@ -407,13 +407,6 @@ jobs:
           path: 6tron/drivers/quectel_l86/samples
           options: ${{ env.TWISTER_OPTIONS }}
 
-      - name: Sensirion SCD4x
-        uses: catie-aq/zephyr_workflows/zephyr_twister@main
-        if: always()
-        with:
-          path: 6tron/drivers/sensirion_scd4x/samples
-          options: ${{ env.TWISTER_OPTIONS }}
-
       - name: TE Connectivity HTU21D
         uses: catie-aq/zephyr_workflows/zephyr_twister@main
         if: always()
