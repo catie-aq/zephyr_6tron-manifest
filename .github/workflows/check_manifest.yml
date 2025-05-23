@@ -61,6 +61,8 @@ jobs:
                     - mbedtls
                     - fatfs
                     - mcuboot
+                    - open-amp
+                    - libmetal
           EOF
 
       - uses: catie-aq/zephyr_workflows/zephyr_init@main
