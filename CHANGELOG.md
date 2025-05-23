@@ -6,15 +6,20 @@
 
 - Add ability to select port for shield connection through devicetree preprocessor macros:
     - Zest_Display_LCD
+    - Zest_Interface_Ethernet
     - Zest_Interface_RS232
     - Zest_Interface_RS485
     - Zest_Radio_GNSS
     - Zest_Radio_LoRa868
+    - Zest_RTC_RV-8803-C7
     - Zest_Sensor_P-T-RH
-    - Zes_Storage_microSD
+    - Zest_Storage_microSD
 
 ### Changed
 
+- Rename `rv8803` to `rv8803-catie` (rv8803 is now supported in Zephyr).
+- Rename `zest_rtc_rv-8803-c7` shield to `zest_rtc_rv8803-c7`.
+- Support Zephyr OS 4.1.0.
 - Update Microchip MCP3425 driver API from Sensor to ADC.
 - Update Quectel L86 driver with the latest API.
 
