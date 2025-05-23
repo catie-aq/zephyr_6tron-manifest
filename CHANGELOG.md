@@ -17,6 +17,7 @@
 
 ### Changed
 
+- Remove Sensirion SCD4x driver (now supported in Zephyr).
 - Rename `rv8803` to `rv8803-catie` (rv8803 is now supported in Zephyr).
 - Rename `zest_rtc_rv-8803-c7` shield to `zest_rtc_rv8803-c7`.
 - Support Zephyr OS 4.1.0.
