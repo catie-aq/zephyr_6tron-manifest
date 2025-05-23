@@ -274,13 +274,13 @@ jobs:
           application: zephyr/samples/basic/blinky
           shield: zest_radio_wifi
 
-      - name: Zest_RTC_RV-8803-C7
+      - name: Zest_RTC_RV8803-C7
         uses: catie-aq/zephyr_workflows/zephyr_build@main
         if: always()
         with:
           board: zest_core_stm32l4a6rg
           application: zephyr/samples/basic/blinky
-          shield: zest_rtc_rv-8803-c7
+          shield: zest_rtc_rv8803-c7
 
       - name: Zest_Sensor_IMU
         uses: catie-aq/zephyr_workflows/zephyr_build@main
