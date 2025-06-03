@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [4.1.0+202505] - 20250523
+
 ### Added
 
 - Add ability to select port for shield connection through devicetree preprocessor macros:
@@ -149,4 +151,5 @@ _Initial release._
 [3.6.0+202407]: https://github.com/catie-aq/zephyr_6tron-manifest/releases/tag/v3.6.0+202407
 [3.7.0+202408]: https://github.com/catie-aq/zephyr_6tron-manifest/releases/tag/v3.7.0+202408
 [3.7.0+202412]: https://github.com/catie-aq/zephyr_6tron-manifest/releases/tag/v3.7.0+202412
-[4.0.0+202502]:https://github.com/catie-aq/zephyr_6tron-manifest/releases/tag/v4.0.0+202502
+[4.0.0+202502]: https://github.com/catie-aq/zephyr_6tron-manifest/releases/tag/v4.0.0+202502
+[4.1.0+202505]: https://github.com/catie-aq/zephyr_6tron-manifest/releases/tag/v4.1.0+202505
