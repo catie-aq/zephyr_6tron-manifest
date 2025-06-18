@@ -37,7 +37,6 @@ in the [6TRON](https://6tron.io) project.
 
 ## Drivers
 
-- [AMS AS621X](https://github.com/catie-aq/zephyr_ams-as621x)
 - [Bosch BNO055](https://github.com/catie-aq/zephyr_bosch-bno055)
 - [Honeywell HPMA115](https://github.com/catie-aq/zephyr_honeywell-hpma115)
 - [ILITEK ILI9163C](https://github.com/catie-aq/zephyr_ilitek-ili9163c)
