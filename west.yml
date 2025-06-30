@@ -30,7 +30,7 @@ manifest:
       path: 6tron/boards/zest_core_nrf52832
     - name: zest_core_nrf5340
       repo-path: zephyr_zest-core-nrf5340
-      revision: 40b31ebe9768c817e28358f132f3fe7c19dd4045
+      revision: fc4e5dfd6d1d9bd6bd21c3e8caa67893e020fd82
       path: 6tron/boards/zest_core_nrf5340
     - name: zest_core_stm32g474ve
       repo-path: zephyr_zest-core-stm32g474ve
