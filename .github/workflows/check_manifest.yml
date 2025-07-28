@@ -54,6 +54,7 @@ jobs:
                 import:
                   name-allowlist:
                     - cmsis
+                    - cmsis_6
                     - hal_stm32
                     - hal_nordic
                     - loramac-node
@@ -195,6 +196,7 @@ jobs:
                 import:
                   name-allowlist:
                     - cmsis
+                    - cmsis_6
                     - hal_stm32
           EOF
 
@@ -337,6 +339,7 @@ jobs:
                 import:
                   name-allowlist:
                     - cmsis
+                    - cmsis_6
                     - hal_stm32
           EOF
 
