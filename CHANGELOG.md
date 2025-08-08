@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### Removed
+
+- Remove AMS AS621x driver (now supported in Zephyr OS).
+
 ## [4.1.0+202505] - 20250523
 
 ### Added
