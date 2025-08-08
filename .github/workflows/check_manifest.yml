@@ -347,13 +347,6 @@ jobs:
         with:
           personal_access_token: ${{ secrets.CI_6TRON_ZEPHYR_RO }}
 
-      - name: AMS AS621x
-        uses: catie-aq/zephyr_workflows/zephyr_twister@main
-        if: always()
-        with:
-          path: 6tron/drivers/ams_as621x/samples
-          options: ${{ env.TWISTER_OPTIONS }}
-
       - name: Bosch BNO055
         uses: catie-aq/zephyr_workflows/zephyr_twister@main
         if: always()
