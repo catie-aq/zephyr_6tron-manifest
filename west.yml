@@ -30,7 +30,7 @@ manifest:
       path: 6tron/boards/zest_core_nrf52832
     - name: zest_core_nrf5340
       repo-path: zephyr_zest-core-nrf5340
-      revision: fc4e5dfd6d1d9bd6bd21c3e8caa67893e020fd82
+      revision: 3e2f71b0e7a9c69e314a16a2d5ff7ed1813b5a6c
       path: 6tron/boards/zest_core_nrf5340
     - name: zest_core_stm32g474ve
       repo-path: zephyr_zest-core-stm32g474ve
@@ -38,7 +38,7 @@ manifest:
       path: 6tron/boards/zest_core_stm32g474ve
     - name: zest_core_stm32h753zi
       repo-path: zephyr_zest-core-stm32h753zi
-      revision: a79538ebe7437c5c28d65bf2bff05f77877ec9a8
+      revision: be9862e1b6d2b6e84fcf8503920253c05147c5f4
       path: 6tron/boards/zest_core_stm32h753zi
     - name: zest_core_stm32l4a6rg
       repo-path: zephyr_zest-core-stm32l4a6rg
@@ -120,7 +120,7 @@ manifest:
       path: 6tron/drivers/ams_as621x
     - name: bosch_bno055
       repo-path: zephyr_bosch-bno055
-      revision: bbf91f02757d5155e99af76259dd89a0beada7ac
+      revision: 48210fbc515c54570ce8dbc3d6d58edc07a8268f
       path: 6tron/drivers/bosch_bno055
     - name: honeywell_hpma115
       repo-path: zephyr_honeywell-hpma115
