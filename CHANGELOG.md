@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [4.2.0+202508] - 20250829
+
 ### Removed
 
 - Remove AMS AS621x driver (now supported in Zephyr OS).
@@ -157,3 +159,4 @@ _Initial release._
 [3.7.0+202412]: https://github.com/catie-aq/zephyr_6tron-manifest/releases/tag/v3.7.0+202412
 [4.0.0+202502]: https://github.com/catie-aq/zephyr_6tron-manifest/releases/tag/v4.0.0+202502
 [4.1.0+202505]: https://github.com/catie-aq/zephyr_6tron-manifest/releases/tag/v4.1.0+202505
+[4.2.0+202508]: https://github.com/catie-aq/zephyr_6tron-manifest/releases/tag/v4.2.0+202508
