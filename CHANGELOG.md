@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### Removed
+
+- Remove Sensirion SCD4X driver (now supported in Zephyr OS).
+
 ## [4.2.0+202508] - 20250829
 
 ### Removed
