@@ -146,10 +146,6 @@ manifest:
       repo-path: zephyr_quectel-l86
       revision: 96efc31c70890de20218fce76bbe26d4a603e05b
       path: 6tron/drivers/quectel_l86
-    - name: sensirion_scd4x
-      repo-path: zephyr_sensirion-scd4x
-      revision: 3688d44c051071e721a08f4ce4ea8caa778eb62b
-      path: 6tron/drivers/sensirion_scd4x
     - name: te-connectivity_htu21d
       repo-path: zephyr_te-connectivity-htu21d
       revision: cb10ac462907403ba2fcbc6289c80ecf59e1d302
