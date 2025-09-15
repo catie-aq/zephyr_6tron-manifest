@@ -146,6 +146,12 @@ manifest:
       repo-path: zephyr_quectel-l86
       revision: 96efc31c70890de20218fce76bbe26d4a603e05b
       path: 6tron/drivers/quectel_l86
+    - name: st-stsafe-a1xx
+      repo-path: zephyr_st-stsafe-a1xx
+      revision: 133b5daeebe3b23346506bdea475a985112b9f84
+      path: 6tron/drivers/st-stsafe-a1xx
+      # import: true
+      submodules: true
     - name: te-connectivity_htu21d
       repo-path: zephyr_te-connectivity-htu21d
       revision: cb10ac462907403ba2fcbc6289c80ecf59e1d302
