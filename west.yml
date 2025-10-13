@@ -62,11 +62,11 @@ manifest:
     # ==================== Zest Shields =====================
     - name: zest_adapter_click
       repo-path: zephyr_zest-adapter-click
-      revision: b2f9751dcbd1a2e92e08cb6cdfbda1d351d9a64b
+      revision: 10163e381e2fa5042b2ba1e705165f363cbff16e
       path: 6tron/shields/zest_adapter_click
     - name: zest_battery_lipo
       repo-path: zephyr_zest-battery-lipo
-      revision: bf11d4c2474c06692c5f609964ee9e05556902e9
+      revision: c524fee753a73d7a8b1e60bbf536ee733149a1c8
       path: 6tron/shields/zest_battery_lipo
     - name: zest_display_lcd
       repo-path: zephyr_zest-display-lcd
@@ -94,7 +94,7 @@ manifest:
       path: 6tron/shields/zest_radio_lora868
     - name: zest_radio_wifi
       repo-path: zephyr_zest-radio-wifi
-      revision: fbb419e254556548c096e18abab4a1f9ec5bb6f3
+      revision: bfe3759bb9df3bd67bc0bc0ea59e535a043e28c7
       path: 6tron/shields/zest_radio_wifi
     - name: zest_rtc_rv-8803-c7
       repo-path: zephyr_zest-rtc-rv-8803-c7
@@ -102,7 +102,7 @@ manifest:
       path: 6tron/shields/zest_rtc_rv-8803-c7
     - name: zest_sensor_imu
       repo-path: zephyr_zest-sensor-imu
-      revision: 318a4f8d81fbfcd45a176c6a789599d429d941ba
+      revision: b4aec4a2af64ec0319fe43019af43fd8bfb64e17
       path: 6tron/shields/zest_sensor_imu
     - name: zest_sensor_p-t-rh
       repo-path: zephyr_zest-sensor-p-t-rh
