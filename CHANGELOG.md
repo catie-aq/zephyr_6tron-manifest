@@ -6,6 +6,9 @@
 
 - Remove Sensirion SCD4X driver (now supported in Zephyr OS).
 
+### Added
+- Add `st-stsafe-a1xx` support for `Zest_Security_SecureElement`.
+
 ## [4.2.0+202508] - 20250829
 
 ### Removed
