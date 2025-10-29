@@ -211,6 +211,7 @@ jobs:
           board: zest_core_stm32l4a6rg
           application: zephyr/samples/basic/blinky
           shield: zest_adapter_click
+          overlay: ZEST_ADAPTER_CLICK(1)
 
       - name: Zest_Battery_LiPo
         uses: catie-aq/zephyr_workflows/zephyr_build@main
@@ -219,6 +220,7 @@ jobs:
           board: zest_core_stm32l4a6rg
           application: zephyr/samples/basic/blinky
           shield: zest_battery_lipo
+          overlay: ZEST_BATTERY_LIPO(1)
 
       - name: Zest_Display_LCD
         uses: catie-aq/zephyr_workflows/zephyr_build@main
@@ -227,6 +229,7 @@ jobs:
           board: zest_core_stm32l4a6rg
           application: zephyr/samples/basic/blinky
           shield: zest_display_lcd
+          overlay: ZEST_DISPLAY_LCD(1)
 
       - name: Zest_Interface_Ethernet
         uses: catie-aq/zephyr_workflows/zephyr_build@main
@@ -235,6 +238,7 @@ jobs:
           board: zest_core_stm32l4a6rg
           application: zephyr/samples/basic/blinky
           shield: zest_interface_ethernet
+          overlay: ZEST_INTERFACE_ETHERNET(1)
 
       - name: Zest_Interface_RS232
         uses: catie-aq/zephyr_workflows/zephyr_build@main
@@ -243,6 +247,7 @@ jobs:
           board: zest_core_stm32l4a6rg
           application: zephyr/samples/basic/blinky
           shield: zest_interface_rs232
+          overlay: ZEST_INTERFACE_RS232(1)
 
       - name: Zest_Interface_RS485
         uses: catie-aq/zephyr_workflows/zephyr_build@main
@@ -251,6 +256,7 @@ jobs:
           board: zest_core_stm32l4a6rg
           application: zephyr/samples/basic/blinky
           shield: zest_interface_rs485
+          overlay: ZEST_INTERFACE_RS485(1)
 
       - name: Zest_Radio_GNSS
         uses: catie-aq/zephyr_workflows/zephyr_build@main
@@ -259,6 +265,7 @@ jobs:
           board: zest_core_stm32l4a6rg
           application: zephyr/samples/basic/blinky
           shield: zest_radio_gnss
+          overlay: ZEST_RADIO_GNSS(1)
 
       - name: Zest_Radio_LoRa868
         uses: catie-aq/zephyr_workflows/zephyr_build@main
@@ -267,6 +274,7 @@ jobs:
           board: zest_core_stm32l4a6rg
           application: zephyr/samples/basic/blinky
           shield: zest_radio_lora868
+          overlay: ZEST_RADIO_LORA868(1)
 
       - name: Zest_Radio_WiFi
         uses: catie-aq/zephyr_workflows/zephyr_build@main
@@ -275,6 +283,7 @@ jobs:
           board: zest_core_stm32l4a6rg
           application: zephyr/samples/basic/blinky
           shield: zest_radio_wifi
+          overlay: ZEST_RADIO_WIFI(1)
 
       - name: Zest_RTC_RV8803-C7
         uses: catie-aq/zephyr_workflows/zephyr_build@main
@@ -283,6 +292,7 @@ jobs:
           board: zest_core_stm32l4a6rg
           application: zephyr/samples/basic/blinky
           shield: zest_rtc_rv8803-c7
+          overlay: ZEST_RTC_RV8803_C7(1)
 
       - name: Zest_Sensor_IMU
         uses: catie-aq/zephyr_workflows/zephyr_build@main
@@ -291,6 +301,7 @@ jobs:
           board: zest_core_stm32l4a6rg
           application: zephyr/samples/basic/blinky
           shield: zest_sensor_imu
+          overlay: ZEST_SENSOR_IMU(1)
 
       - name: Zest_Sensor_P-T-RH
         uses: catie-aq/zephyr_workflows/zephyr_build@main
@@ -299,6 +310,7 @@ jobs:
           board: zest_core_stm32l4a6rg
           application: zephyr/samples/basic/blinky
           shield: zest_sensor_p-t-rh
+          overlay: ZEST_SENSOR_P_T_RH(1)
 
       - name: Zest_Storage_MicroSD
         uses: catie-aq/zephyr_workflows/zephyr_build@main
@@ -307,6 +319,7 @@ jobs:
           board: zest_core_stm32l4a6rg
           application: zephyr/samples/basic/blinky
           shield: zest_storage_microsd
+          overlay: ZEST_STORAGE_MICROSD(1)
 
   driver:
     needs: check-manifest
