@@ -94,7 +94,7 @@ jobs:
           options: ${{ env.TWISTER_OPTIONS }}
           tags: ${{ env.TAGS }}
 
-      - name: Zest_Core_NRF52840 CPUAPP
+      - name: Zest_Core_NRF5340 CPUAPP
         uses: catie-aq/zephyr_workflows/zephyr_twister@main
         if: always()
         with:
@@ -102,7 +102,7 @@ jobs:
           options: ${{ env.TWISTER_OPTIONS }}
           tags: ${{ env.TAGS }}
 
-      - name: Zest_Core_NRF52840 CPUNET NS
+      - name: Zest_Core_NRF5340 CPUAPP NS
         uses: catie-aq/zephyr_workflows/zephyr_twister@main
         if: always()
         with:
@@ -110,7 +110,7 @@ jobs:
           options: ${{ env.TWISTER_OPTIONS }}
           tags: ${{ env.TAGS }}
 
-      - name: Zest_Core_NRF52840 CPUNET
+      - name: Zest_Core_NRF5340 CPUNET
         uses: catie-aq/zephyr_workflows/zephyr_twister@main
         if: always()
         with:
