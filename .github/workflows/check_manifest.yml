@@ -389,13 +389,6 @@ jobs:
           path: 6tron/drivers/microcrystal_rv8803/samples
           options: ${{ env.TWISTER_OPTIONS }}
 
-      - name: Omron 2SMPB-02E
-        uses: catie-aq/zephyr_workflows/zephyr_twister@main
-        if: always()
-        with:
-          path: 6tron/drivers/omron_2smpb-02e/samples
-          options: ${{ env.TWISTER_OPTIONS }}
-
       - name: Quectel L86 GNSS
         uses: catie-aq/zephyr_workflows/zephyr_twister@main
         if: always()

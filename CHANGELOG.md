@@ -5,6 +5,7 @@
 ### Removed
 
 - Remove Sensirion SCD4X driver (now supported in Zephyr OS).
+- Remove Omron 2SMPB-02E driver (contributed to Zephyr OS).
 
 ### Added
 - Add `st-stsafe-a1xx` support for `Zest_Security_SecureElement`.

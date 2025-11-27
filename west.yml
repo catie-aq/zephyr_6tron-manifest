@@ -138,10 +138,6 @@ manifest:
       repo-path: zephyr_microcrystal-rv8803
       revision: df67aea45b1ee6c1c60881f38b4882a96dbd472c
       path: 6tron/drivers/microcrystal_rv8803
-    - name: omron_2smpb-02e
-      repo-path: zephyr_omron-2smpb-02e
-      revision: 28f602257de6b78a6f82fc826a4ba5c8aa9fcdc7
-      path: 6tron/drivers/omron_2smpb-02e
     - name: quectel_l86
       repo-path: zephyr_quectel-l86
       revision: 96efc31c70890de20218fce76bbe26d4a603e05b
