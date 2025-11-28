@@ -7,7 +7,13 @@
 - Remove Sensirion SCD4X driver (now supported in Zephyr OS).
 
 ### Added
+
 - Add `st-stsafe-a1xx` support for `Zest_Security_SecureElement`.
+- Add ability to select port for shield connection through devicetree preprocessor macros:
+    - Zest_Adapter_Click
+    - Zest_Battery_LiPo
+    - Zest_Radio_WiFi
+    - Zest_Sensor_IMU
 
 ## [4.2.0+202508] - 20250829
 
