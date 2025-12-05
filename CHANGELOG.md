@@ -15,6 +15,8 @@
     - Zest_Battery_LiPo
     - Zest_Radio_WiFi
     - Zest_Sensor_IMU
+- Add support for FMLR-72 integrated LED on `Zest_Core_FMLR-72`.
+- Add configuration to enable DCDC regulator mode on `Zest_Core_nRF52832`.
 
 ## [4.2.0+202508] - 20250829
 
