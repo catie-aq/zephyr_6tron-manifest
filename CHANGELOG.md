@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [4.3.0+202511] - 20251128
+
 ### Removed
 
 - Remove Sensirion SCD4X driver (now supported in Zephyr OS).
@@ -176,3 +178,4 @@ _Initial release._
 [4.0.0+202502]: https://github.com/catie-aq/zephyr_6tron-manifest/releases/tag/v4.0.0+202502
 [4.1.0+202505]: https://github.com/catie-aq/zephyr_6tron-manifest/releases/tag/v4.1.0+202505
 [4.2.0+202508]: https://github.com/catie-aq/zephyr_6tron-manifest/releases/tag/v4.2.0+202508
+[4.3.0+202511]: https://github.com/catie-aq/zephyr_6tron-manifest/releases/tag/v4.3.0+202511
