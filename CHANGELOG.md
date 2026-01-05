@@ -5,6 +5,7 @@
 ### Added
 
 - Add support for `Zest_Sensor_IMU` versions 1.0.2, 3.0.0, 3.1.0 and 4.0.0.
+- Add support for `Zest_Adapter_Shield`.
 
 ### Changed
 
