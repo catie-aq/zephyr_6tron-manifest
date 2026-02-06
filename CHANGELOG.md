@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### Added
+
+- Support encrypted I2C communication to STSafe via `st-stsafe-a1xx` AES ECB/CBC functions
+
 ## [4.3.0+202511] - 20251128
 
 ### Removed
