@@ -2,6 +2,14 @@
 
 ## [Unreleased]
 
+### Added
+
+- Add support for `Zest_Security_SecureElement` using `--shield`.
+
+### Changed
+
+- Update key security in `st-stsafe-a1xx` driver.
+
 ## [4.3.0+202511] - 20251128
 
 ### Removed
