@@ -294,6 +294,15 @@ jobs:
           shield: zest_rtc_rv8803-c7
           overlay: ZEST_RTC_RV8803_C7(1)
 
+      - name: Zest_Security_SecureElement
+        uses: catie-aq/zephyr_workflows/zephyr_build@main
+        if: always()
+        with:
+          board: zest_core_nrf5340/nrf5340/cpuapp/ns
+          application: zephyr/samples/basic/blinky
+          shield: zest_security_secureelement
+          overlay: ZEST_SECURITY_SECUREELEMENT(1)
+
       - name: Zest_Sensor_IMU
         uses: catie-aq/zephyr_workflows/zephyr_build@main
         if: always()
@@ -407,6 +416,13 @@ jobs:
         if: always()
         with:
           path: 6tron/drivers/quectel_l86/samples
+          options: ${{ env.TWISTER_OPTIONS }}
+
+      - name: ST STSafe A1xx
+        uses: catie-aq/zephyr_workflows/zephyr_twister@main
+        if: always()
+        with:
+          path: 6tron/drivers/st-stsafe-a1xx/samples
           options: ${{ env.TWISTER_OPTIONS }}
 
       - name: TE Connectivity HTU21D
