@@ -4,7 +4,7 @@
 
 ### Added
 
-- Add support for `Zest_Security_SecureElement` using `--shield`.
+- Add support for `Zest_Security_SecureElement`.
 
 ### Changed
 
