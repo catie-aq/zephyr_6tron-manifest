@@ -198,6 +198,10 @@ jobs:
                     - cmsis
                     - cmsis_6
                     - hal_stm32
+                    - hal_nordic
+                    - trusted-firmware-m
+                    - mbedtls
+                    - mcuboot
           EOF
 
       - uses: catie-aq/zephyr_workflows/zephyr_init@main
@@ -363,6 +367,10 @@ jobs:
                     - cmsis
                     - cmsis_6
                     - hal_stm32
+                    - hal_nordic
+                    - trusted-firmware-m
+                    - mbedtls
+                    - mcuboot
           EOF
 
       - uses: catie-aq/zephyr_workflows/zephyr_init@main
