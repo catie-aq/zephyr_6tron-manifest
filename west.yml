@@ -102,7 +102,7 @@ manifest:
       path: 6tron/shields/zest_rtc_rv-8803-c7
     - name: zest_security_secureelement
       repo-path: zephyr_zest-security-secureelement
-      revision: 20f20c1720555bb879c6aae6a00ee6b629ce938b
+      revision: d2056ee33f47b257d206de134f3392e6cf3c573c
       path: 6tron/shields/zest_security_secureelement
     - name: zest_sensor_imu
       repo-path: zephyr_zest-sensor-imu
@@ -148,7 +148,7 @@ manifest:
       path: 6tron/drivers/quectel_l86
     - name: st-stsafe-a1xx
       repo-path: zephyr_st-stsafe-a1xx
-      revision: 6f3d6596be46dca183b99fe5446c5dd1e279027a
+      revision: da419538314e791aa5ace7e848b837255864adc6
       path: 6tron/drivers/st-stsafe-a1xx
       import: true
     - name: te-connectivity_htu21d
