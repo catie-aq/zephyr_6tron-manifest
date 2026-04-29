@@ -18,11 +18,11 @@ manifest:
     # ================== Zest_Core Boards ==================
     - name: zest_core_fmlr-72
       repo-path: zephyr_zest-core-fmlr-72
-      revision: 3ca6ad3cace7f7c1d20a64f745fb5dcdd8670f6b
+      revision: 0a2d77718e039f8f0f4e1871daa38cc5af74f307
       path: 6tron/boards/zest_core_fmlr-72
     - name: zest_core_mtxdot
       repo-path: zephyr_zest-core-mtxdot
-      revision: 4fd7ffea2e02ee240c468e6169e7eae77906970c
+      revision: 5784017ae13236cc191fb9145f95e00030f6a053
       path: 6tron/boards/zest_core_mtxdot
     - name: zest_core_nrf52832
       repo-path: zephyr_zest-core-nrf52832
@@ -42,7 +42,7 @@ manifest:
       path: 6tron/boards/zest_core_stm32h753zi
     - name: zest_core_stm32l4a6rg
       repo-path: zephyr_zest-core-stm32l4a6rg
-      revision: d0705194502134dbc39cb83038962ba14a5201cf
+      revision: aff48e20697b9f8f4bd2aebaae3e59a0c1cf8422
       path: 6tron/boards/zest_core_stm32l4a6rg
     - name: zest_core_stm32l562ve
       repo-path: zephyr_zest-core-stm32l562ve
@@ -66,15 +66,15 @@ manifest:
       path: 6tron/shields/zest_adapter_click
     - name: zest_battery_lipo
       repo-path: zephyr_zest-battery-lipo
-      revision: c524fee753a73d7a8b1e60bbf536ee733149a1c8
+      revision: 25bc25874ac235447c44dae25783346c8ad538a9
       path: 6tron/shields/zest_battery_lipo
     - name: zest_display_lcd
       repo-path: zephyr_zest-display-lcd
-      revision: a1bf26f9fd2aa51c42e3efc65ad1e7b60b1993d9
+      revision: 7b426f668ecdfb3b2520d3c3b28c6265e65ed3e4
       path: 6tron/shields/zest_display_lcd
     - name: zest_interface_ethernet
       repo-path: zephyr_zest-interface-ethernet
-      revision: b34a10f8ba6999debf3ba1eb3806b6bd3ca2b884
+      revision: 7c61f05482434c9e79abe1525777195f85632018
       path: 6tron/shields/zest_interface_ethernet
     - name: zest_interface_rs232
       repo-path: zephyr_zest-interface-rs232
@@ -114,7 +114,7 @@ manifest:
       path: 6tron/shields/zest_sensor_p-t-rh
     - name: zest_storage_microsd
       repo-path: zephyr_zest-storage-microsd
-      revision: 406538f238c86e2f317e09554e64fc62f59d98e2
+      revision: 381f3067c69ea1114dc11412492a2bc92c776845
       path: 6tron/shields/zest_storage_microsd
 
     # ====================== Drivers =======================
@@ -140,7 +140,7 @@ manifest:
       path: 6tron/drivers/microchip_mcp3425
     - name: microcrystal_rv8803
       repo-path: zephyr_microcrystal-rv8803
-      revision: df67aea45b1ee6c1c60881f38b4882a96dbd472c
+      revision: e9cf6f45152364115417f166393f3487718b1200
       path: 6tron/drivers/microcrystal_rv8803
     - name: quectel_l86
       repo-path: zephyr_quectel-l86
@@ -148,7 +148,7 @@ manifest:
       path: 6tron/drivers/quectel_l86
     - name: st-stsafe-a1xx
       repo-path: zephyr_st-stsafe-a1xx
-      revision: da419538314e791aa5ace7e848b837255864adc6
+      revision: 00f51d977f0dbf5fde6351cf96cc0f17f14cc0d5
       path: 6tron/drivers/st-stsafe-a1xx
       import: true
     - name: te-connectivity_htu21d
