@@ -9,6 +9,12 @@
 ### Changed
 
 - Update key security in `st-stsafe-a1xx` driver.
+- Reduce default SPI frequency for `Zest_Display_LCD`, `Zest_Storage_microSD` to 10MHz for better compatibility.
+- Fix Battery state detection for `Microcrystal RV-8803`.
+- Set default output power amplifier to `pa-boost` for `Zest_Core_FMLR-72`.
+- Fix sx1272 LoRa module configuration for `Zest_Core_MTXDOT`.
+- Fix GPIO configuration for the alert pin on `Zest_Battery_LiPo`.
+- Fix GPIO mapping on sixtron-bus for `Zest_Core_STM32L4A6RG`.
 
 ## [4.3.0+202511] - 20251128
 
