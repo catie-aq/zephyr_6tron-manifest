@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### Removed
+
+- Remove ILITEK ILI9163C driver (contributed to Zephyr OS).
+
 ### Added
 
 - Add support for `Zest_Security_SecureElement`.

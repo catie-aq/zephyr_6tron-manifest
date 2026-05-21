@@ -391,13 +391,6 @@ jobs:
           path: 6tron/drivers/honeywell_hpma115/samples
           options: ${{ env.TWISTER_OPTIONS }}
 
-      - name: Ilitek ILI9163C
-        uses: catie-aq/zephyr_workflows/zephyr_twister@main
-        if: always()
-        with:
-          path: 6tron/drivers/ilitek_ili9163c/samples
-          options: ${{ env.TWISTER_OPTIONS }}
-
       - name: Maxim MAX17201
         uses: catie-aq/zephyr_workflows/zephyr_twister@main
         if: always()
