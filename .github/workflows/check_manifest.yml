@@ -59,7 +59,9 @@ jobs:
                     - hal_nordic
                     - loramac-node
                     - trusted-firmware-m
+                    - tf-psa-crypto
                     - mbedtls
+                    - mbedtls-3.6
                     - fatfs
                     - mcuboot
                     - open-amp
@@ -200,7 +202,9 @@ jobs:
                     - hal_stm32
                     - hal_nordic
                     - trusted-firmware-m
+                    - tf-psa-crypto
                     - mbedtls
+                    - mbedtls-3.6
                     - mcuboot
           EOF
 
@@ -369,7 +373,9 @@ jobs:
                     - hal_stm32
                     - hal_nordic
                     - trusted-firmware-m
+                    - tf-psa-crypto
                     - mbedtls
+                    - mbedtls-3.6
                     - mcuboot
           EOF
 
