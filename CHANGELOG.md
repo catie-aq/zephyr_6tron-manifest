@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [4.4.0+202605] - 20260522
+
 ### Removed
 
 - Remove ILITEK ILI9163C driver (contributed to Zephyr OS).
@@ -201,3 +203,4 @@ _Initial release._
 [4.1.0+202505]: https://github.com/catie-aq/zephyr_6tron-manifest/releases/tag/v4.1.0+202505
 [4.2.0+202508]: https://github.com/catie-aq/zephyr_6tron-manifest/releases/tag/v4.2.0+202508
 [4.3.0+202511]: https://github.com/catie-aq/zephyr_6tron-manifest/releases/tag/v4.3.0+202511
+[4.4.0+202605]: https://github.com/catie-aq/zephyr_6tron-manifest/releases/tag/v4.4.0+202605
