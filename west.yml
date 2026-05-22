@@ -18,11 +18,11 @@ manifest:
     # ================== Zest_Core Boards ==================
     - name: zest_core_fmlr-72
       repo-path: zephyr_zest-core-fmlr-72
-      revision: 0a2d77718e039f8f0f4e1871daa38cc5af74f307
+      revision: 01726aa953f6c21709f5d036caa5206a3b1e641d
       path: 6tron/boards/zest_core_fmlr-72
     - name: zest_core_mtxdot
       repo-path: zephyr_zest-core-mtxdot
-      revision: 5784017ae13236cc191fb9145f95e00030f6a053
+      revision: 77f292c4ce6839c2ab37c26f36b242bf02a4d33b
       path: 6tron/boards/zest_core_mtxdot
     - name: zest_core_nrf52832
       repo-path: zephyr_zest-core-nrf52832
@@ -30,23 +30,23 @@ manifest:
       path: 6tron/boards/zest_core_nrf52832
     - name: zest_core_nrf5340
       repo-path: zephyr_zest-core-nrf5340
-      revision: 70254b661c4baaa29a70a09e0e6ee099af579e80
+      revision: 87b266acbd415be1c4719778e3909e8ff899f480
       path: 6tron/boards/zest_core_nrf5340
     - name: zest_core_stm32g474ve
       repo-path: zephyr_zest-core-stm32g474ve
-      revision: e67c3e4d97e23c64777081d36de6c126e6df7f23
+      revision: f335399cb34cd4a50a796a08acc24fc5f0a36a69
       path: 6tron/boards/zest_core_stm32g474ve
     - name: zest_core_stm32h753zi
       repo-path: zephyr_zest-core-stm32h753zi
-      revision: 1c3008facd3060a9c4d38e39639a6699e4b67247
+      revision: 55249790f551877faf6ab449f1caa55dd0f0900a
       path: 6tron/boards/zest_core_stm32h753zi
     - name: zest_core_stm32l4a6rg
       repo-path: zephyr_zest-core-stm32l4a6rg
-      revision: aff48e20697b9f8f4bd2aebaae3e59a0c1cf8422
+      revision: 5689880e1d161e2a08186583d3f17cc672f9503e
       path: 6tron/boards/zest_core_stm32l4a6rg
     - name: zest_core_stm32l562ve
       repo-path: zephyr_zest-core-stm32l562ve
-      revision: 7f2feb3ef729f0f08e217a02731d030b977c6428
+      revision: bdd620aa952c6758efa3b2cff4f4093a8a1c79eb
       path: 6tron/boards/zest_core_stm32l562ve
 
     # ================= Integrated Devices =================
@@ -70,7 +70,7 @@ manifest:
       path: 6tron/shields/zest_battery_lipo
     - name: zest_display_lcd
       repo-path: zephyr_zest-display-lcd
-      revision: 7b426f668ecdfb3b2520d3c3b28c6265e65ed3e4
+      revision: 54d11ff495b2d519741e1f62ae3877ce0ef34ffa
       path: 6tron/shields/zest_display_lcd
     - name: zest_interface_ethernet
       repo-path: zephyr_zest-interface-ethernet
@@ -102,7 +102,7 @@ manifest:
       path: 6tron/shields/zest_rtc_rv-8803-c7
     - name: zest_security_secureelement
       repo-path: zephyr_zest-security-secureelement
-      revision: d2056ee33f47b257d206de134f3392e6cf3c573c
+      revision: d19e5c10302cb0b55b4d8281359daa1770234427
       path: 6tron/shields/zest_security_secureelement
     - name: zest_sensor_imu
       repo-path: zephyr_zest-sensor-imu
@@ -148,7 +148,7 @@ manifest:
       path: 6tron/drivers/quectel_l86
     - name: st-stsafe-a1xx
       repo-path: zephyr_st-stsafe-a1xx
-      revision: 00f51d977f0dbf5fde6351cf96cc0f17f14cc0d5
+      revision: 399b92c8da5ad9b979e26dcda2ca07cceda73f16
       path: 6tron/drivers/st-stsafe-a1xx
       import: true
     - name: te-connectivity_htu21d
