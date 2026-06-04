@@ -2,6 +2,10 @@
 
 ## [Unreleased]
 
+### Added
+
+- Add support for `Zest_Adapter_Shield`.
+
 ## [4.4.0+202605] - 20260522
 
 ### Removed

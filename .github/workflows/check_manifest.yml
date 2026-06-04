@@ -221,6 +221,15 @@ jobs:
           shield: zest_adapter_click
           overlay: ZEST_ADAPTER_CLICK(1)
 
+      - name: Zest_Adapter_Shield
+        uses: catie-aq/zephyr_workflows/zephyr_build@main
+        if: always()
+        with:
+          board: zest_core_stm32l4a6rg
+          application: zephyr/samples/basic/blinky
+          shield: zest_adapter_shield
+          overlay: ZEST_ADAPTER_SHIELD(1)
+
       - name: Zest_Battery_LiPo
         uses: catie-aq/zephyr_workflows/zephyr_build@main
         if: always()
