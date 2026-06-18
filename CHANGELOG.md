@@ -2,6 +2,13 @@
 
 ## [Unreleased]
 
+## [4.4.0+202606] - 20260618
+
+### Changed
+
+- Update `stselib` dependency management on `zephyr_st-stsafe-a1xx`
+- Fix adc reg on `zest-core-fmlr-72`
+
 ## [4.4.0+202605] - 20260522
 
 ### Removed
@@ -204,3 +211,4 @@ _Initial release._
 [4.2.0+202508]: https://github.com/catie-aq/zephyr_6tron-manifest/releases/tag/v4.2.0+202508
 [4.3.0+202511]: https://github.com/catie-aq/zephyr_6tron-manifest/releases/tag/v4.3.0+202511
 [4.4.0+202605]: https://github.com/catie-aq/zephyr_6tron-manifest/releases/tag/v4.4.0+202605
+[4.4.0+202606]: https://github.com/catie-aq/zephyr_6tron-manifest/releases/tag/v4.4.0+202606
