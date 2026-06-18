@@ -18,7 +18,7 @@ manifest:
     # ================== Zest_Core Boards ==================
     - name: zest_core_fmlr-72
       repo-path: zephyr_zest-core-fmlr-72
-      revision: 01726aa953f6c21709f5d036caa5206a3b1e641d
+      revision: bb5f7c08ca514d194e42eb0fb023a4ef78c26d1b
       path: 6tron/boards/zest_core_fmlr-72
     - name: zest_core_mtxdot
       repo-path: zephyr_zest-core-mtxdot
