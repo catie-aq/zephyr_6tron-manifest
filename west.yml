@@ -68,6 +68,11 @@ manifest:
       repo-path: zephyr_zest-battery-lipo
       revision: 25bc25874ac235447c44dae25783346c8ad538a9
       path: 6tron/shields/zest_battery_lipo
+    - name: zest_conditioning_fastadc
+      remote: catie-6tron
+      repo-path: zephyr_zest_conditioning_fastadc
+      revision: ada299a36d752e5f9b3dca0d3d3711c6f12d7866
+      path: 6tron/shields/zest_conditioning_fastadc
     - name: zest_display_lcd
       repo-path: zephyr_zest-display-lcd
       revision: 54d11ff495b2d519741e1f62ae3877ce0ef34ffa
@@ -126,6 +131,11 @@ manifest:
       repo-path: zephyr_honeywell-hpma115
       revision: 437d96964286d6022f8ec75d1f0c1ed6e036a170
       path: 6tron/drivers/honeywell_hpma115
+    - name: lltc_ltc2311-16
+      repo-path: zephyr_lltc_ltc2311-16
+      remote: catie-6tron
+      revision: 4e8acacdf25a7deeeba730dc429f2889e3fb8ddb
+      path: 6tron/drivers/lltc_ltc2311-16
     - name: maxim_max17201
       repo-path: zephyr_maxim-max17201
       revision: 67941660860215143ae021ad04c5c94de44b1e7e
