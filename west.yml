@@ -12,7 +12,7 @@ manifest:
   projects:
     - name: 6tron_connector
       repo-path: zephyr_6tron-connector
-      revision: 7796488103213b53db64830809c55ba2e34016e1
+      revision: eb71c7198f009b1acf726bcfaf8743abafa6b7d8
       path: 6tron/6tron_connector
 
     # ================== Zest_Core Boards ==================
@@ -26,7 +26,7 @@ manifest:
       path: 6tron/boards/zest_core_mtxdot
     - name: zest_core_nrf52832
       repo-path: zephyr_zest-core-nrf52832
-      revision: 89e424440e092f2275c19ef15a707b36f7c4973a
+      revision: 2ae276df36d2334d27db932a30ad2ea9cc04ec61
       path: 6tron/boards/zest_core_nrf52832
     - name: zest_core_nrf5340
       repo-path: zephyr_zest-core-nrf5340
@@ -111,7 +111,7 @@ manifest:
       path: 6tron/shields/zest_security_secureelement
     - name: zest_sensor_imu
       repo-path: zephyr_zest-sensor-imu
-      revision: b4aec4a2af64ec0319fe43019af43fd8bfb64e17
+      revision: 3ae598bb96386a4ecfe8e236c50b408e28ce8411
       path: 6tron/shields/zest_sensor_imu
     - name: zest_sensor_p-t-rh
       repo-path: zephyr_zest-sensor-p-t-rh
