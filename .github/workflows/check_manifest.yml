@@ -338,6 +338,15 @@ jobs:
           shield: zest_storage_microsd
           overlay: ZEST_STORAGE_MICROSD(1)
 
+      - name: Zest_Test_HMI
+        uses: catie-aq/zephyr_workflows/zephyr_build@main
+        if: always()
+        with:
+          board: zest_core_stm32l4a6rg
+          application: zephyr/samples/basic/blinky
+          shield: zest_test_hmi
+          overlay: ZEST_TEST_HMI(1)
+
   driver:
     needs: check-manifest
     runs-on: sonu-github-arc

@@ -30,6 +30,7 @@ in the [6TRON](https://6tron.io) project.
 - [Zest_Sensor_IMU](https://github.com/catie-aq/zephyr_zest-sensor-imu)
 - [Zest_Sensor_P-T-RH](https://github.com/catie-aq/zephyr_zest-sensor-p-t-rh)
 - [Zest_Storage_microSD](https://github.com/catie-aq/zephyr_zest-storage-microsd)
+- [Zest_Test_HMI](https://github.com/catie-aq/zephyr_zest-test-hmi)
 
 ## Integrated Devices
 
