@@ -121,6 +121,10 @@ manifest:
       repo-path: zephyr_zest-storage-microsd
       revision: 381f3067c69ea1114dc11412492a2bc92c776845
       path: 6tron/shields/zest_storage_microsd
+    - name: zest_test_hmi
+      repo-path: zephyr_zest-test-hmi
+      revision: bbbb3d0f9299f72ba69e210a2fcd499391a009e6
+      path: 6tron/shields/zest_test_hmi
 
     # ====================== Drivers =======================
     - name: bosch_bno055
