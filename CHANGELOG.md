@@ -2,6 +2,16 @@
 
 ## [Unreleased]
 
+### Added
+
+- Add support for `Zest_Sensor_IMU` versions 1.0.2, 3.0.0, 3.1.0 and 4.0.0.
+
+### Changed
+
+- Rename `I2C1` pins to `I2C` in `sixtron-bus` connector.
+- Fix I2C communication in `st-stsafe-a1xx` driver.
+- Pin `STSELib` revision to a fixed commit in `st-stsafe-a1xx` driver.
+
 ## [4.4.0+202606] - 20260618
 
 ### Changed
