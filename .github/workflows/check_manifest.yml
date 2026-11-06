@@ -10,7 +10,7 @@ jobs:
   check-manifest:
     runs-on: sonu-github-arc
     container:
-      image: ghcr.io/catie-aq/zephyr_docker:v4.4.0-202605-ci
+      image: ghcr.io/catie-aq/zephyr_docker:v4.5.0-202611-ci
 
     steps:
       - name: Checkout repository
@@ -26,10 +26,10 @@ jobs:
     needs: check-manifest
     runs-on: sonu-github-arc
     container:
-      image: ghcr.io/catie-aq/zephyr_docker:v4.4.0-202605-ci
+      image: ghcr.io/catie-aq/zephyr_docker:v4.5.0-202611-ci
     env:
       CMAKE_PREFIX_PATH: /opt/toolchains
-      ZEPHYR_VERSION: "v4.4.0"
+      ZEPHYR_VERSION: "v4.5.0"
       TWISTER_OPTIONS: "--force-color --inline-logs -v --clobber-output"
       TAGS: "DAC,ieee802154,counter,gpio,serial,i2c,i3c,UART,qspi,pwm,button,usb,spi,lora,i2s,mipi_dbi,wifi,ethernet,nvs,uart,dma,clock_control,usbc,watchdog,dac,w1,input,peci,can,bluetooth,adc,clock"
 
@@ -61,7 +61,6 @@ jobs:
                     - trusted-firmware-m
                     - tf-psa-crypto
                     - mbedtls
-                    - mbedtls-3.6
                     - fatfs
                     - mcuboot
                     - open-amp
@@ -172,10 +171,10 @@ jobs:
     needs: check-manifest
     runs-on: sonu-github-arc
     container:
-      image: ghcr.io/catie-aq/zephyr_docker:v4.4.0-202605-ci
+      image: ghcr.io/catie-aq/zephyr_docker:v4.5.0-202611-ci
     env:
       CMAKE_PREFIX_PATH: /opt/toolchains
-      ZEPHYR_VERSION: "v4.4.0"
+      ZEPHYR_VERSION: "v4.5.0"
 
     steps:
       - name: Checkout repository
@@ -204,7 +203,6 @@ jobs:
                     - trusted-firmware-m
                     - tf-psa-crypto
                     - mbedtls
-                    - mbedtls-3.6
                     - mcuboot
           EOF
 
@@ -360,10 +358,10 @@ jobs:
     needs: check-manifest
     runs-on: sonu-github-arc
     container:
-      image: ghcr.io/catie-aq/zephyr_docker:v4.4.0-202605-ci
+      image: ghcr.io/catie-aq/zephyr_docker:v4.5.0-202611-ci
     env:
       CMAKE_PREFIX_PATH: /opt/toolchains
-      ZEPHYR_VERSION: "v4.4.0"
+      ZEPHYR_VERSION: "v4.5.0"
       TWISTER_OPTIONS: "--force-color --inline-logs -v --clobber-output --integration"
 
     steps:
@@ -393,7 +391,6 @@ jobs:
                     - trusted-firmware-m
                     - tf-psa-crypto
                     - mbedtls
-                    - mbedtls-3.6
                     - mcuboot
           EOF
 
