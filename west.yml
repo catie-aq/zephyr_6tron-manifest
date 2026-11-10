@@ -133,11 +133,11 @@ manifest:
     # ====================== Drivers =======================
     - name: bosch_bno055
       repo-path: zephyr_bosch-bno055
-      revision: 48210fbc515c54570ce8dbc3d6d58edc07a8268f
+      revision: 01cac75900328437e29e08f512e48458a55c1395
       path: 6tron/drivers/bosch_bno055
     - name: honeywell_hpma115
       repo-path: zephyr_honeywell-hpma115
-      revision: 437d96964286d6022f8ec75d1f0c1ed6e036a170
+      revision: 1cdd374d59bfa5d9d5b8b1122cb2c5b3dcfb3443
       path: 6tron/drivers/honeywell_hpma115
     - name: lltc_ltc2311-16
       repo-path: zephyr_lltc-ltc2311-16
@@ -146,19 +146,19 @@ manifest:
       path: 6tron/drivers/lltc_ltc2311-16
     - name: maxim_max17201
       repo-path: zephyr_maxim-max17201
-      revision: 67941660860215143ae021ad04c5c94de44b1e7e
+      revision: 06314deebf09a30ad802fb39f3e617fd7b475db1
       path: 6tron/drivers/maxim_max17201
     - name: microchip_mcp3425
       repo-path: zephyr_microchip-mcp3425
-      revision: e8d169bf19acc563fe22ac45c753adaedf84ff87
+      revision: 6d6744f29e2cb13f7df275593d38e1d59977252b
       path: 6tron/drivers/microchip_mcp3425
     - name: microcrystal_rv8803
       repo-path: zephyr_microcrystal-rv8803
-      revision: e9cf6f45152364115417f166393f3487718b1200
+      revision: e8bc1f60fb90962b633e88b6084c13336ea822dc
       path: 6tron/drivers/microcrystal_rv8803
     - name: quectel_l86
       repo-path: zephyr_quectel-l86
-      revision: 96efc31c70890de20218fce76bbe26d4a603e05b
+      revision: 69963b65687af9a1545199488d61f8bc69ee97f8
       path: 6tron/drivers/quectel_l86
     - name: st-stsafe-a1xx
       repo-path: zephyr_st-stsafe-a1xx
@@ -167,7 +167,7 @@ manifest:
       import: true
     - name: te-connectivity_htu21d
       repo-path: zephyr_te-connectivity-htu21d
-      revision: cb10ac462907403ba2fcbc6289c80ecf59e1d302
+      revision: 686f031e6f42163d5de630ccf29749e1cfed8335
       path: 6tron/drivers/te-connectivity_htu21d
     - name: ti_tsc2003
       repo-path: zephyr_ti-tsc2003
