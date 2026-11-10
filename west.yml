@@ -18,11 +18,11 @@ manifest:
     # ================== Zest_Core Boards ==================
     - name: zest_core_fmlr-72
       repo-path: zephyr_zest-core-fmlr-72
-      revision: bb5f7c08ca514d194e42eb0fb023a4ef78c26d1b
+      revision: 9190a77bf81443fa8b2736e3cba255936a5856ea
       path: 6tron/boards/zest_core_fmlr-72
     - name: zest_core_mtxdot
       repo-path: zephyr_zest-core-mtxdot
-      revision: 77f292c4ce6839c2ab37c26f36b242bf02a4d33b
+      revision: 07bb7379b163937d3b9e6ca179f532efe6bca0f1
       path: 6tron/boards/zest_core_mtxdot
     - name: zest_core_nrf52832
       repo-path: zephyr_zest-core-nrf52832
@@ -34,19 +34,19 @@ manifest:
       path: 6tron/boards/zest_core_nrf5340
     - name: zest_core_stm32g474ve
       repo-path: zephyr_zest-core-stm32g474ve
-      revision: f335399cb34cd4a50a796a08acc24fc5f0a36a69
+      revision: 3b9d10d3d68f74591008a3751c6dbc002741998c
       path: 6tron/boards/zest_core_stm32g474ve
     - name: zest_core_stm32h753zi
       repo-path: zephyr_zest-core-stm32h753zi
-      revision: 55249790f551877faf6ab449f1caa55dd0f0900a
+      revision: a8c4243407ef34b8338d3abebc4591200c13dc11
       path: 6tron/boards/zest_core_stm32h753zi
     - name: zest_core_stm32l4a6rg
       repo-path: zephyr_zest-core-stm32l4a6rg
-      revision: 5689880e1d161e2a08186583d3f17cc672f9503e
+      revision: 6c33f82d3c28cbe04638b5a4389db0eea11b180f
       path: 6tron/boards/zest_core_stm32l4a6rg
     - name: zest_core_stm32l562ve
       repo-path: zephyr_zest-core-stm32l562ve
-      revision: bdd620aa952c6758efa3b2cff4f4093a8a1c79eb
+      revision: 6decaaf1887790d43f3c5bbd85224e122ce01d1a
       path: 6tron/boards/zest_core_stm32l562ve
 
     # ================= Integrated Devices =================
