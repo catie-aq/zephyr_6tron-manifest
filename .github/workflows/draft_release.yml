@@ -1,0 +1,50 @@
+name: Draft Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  draft-release:
+    runs-on: sonu-github-arc
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Extract release notes from CHANGELOG
+        id: notes
+        env:
+          TAG: ${{ github.ref_name }}
+        run: |
+          VERSION="${TAG#v}"
+          awk -v ver="$VERSION" '
+            /^## \[/ {
+              if (found) exit
+              if (index($0, "## [" ver "]") == 1) { found = 1; next }
+            }
+            found { lines[n++] = $0 }
+            END {
+              start = 0; end = n - 1
+              while (start <= end && lines[start] ~ /^[[:space:]]*$/) start++
+              while (end >= start && lines[end] ~ /^[[:space:]]*$/) end--
+              for (i = start; i <= end; i++) print lines[i]
+            }
+          ' CHANGELOG.md > release_notes.md
+          if [ ! -s release_notes.md ]; then
+            echo "::error::No '## [$VERSION]' section found in CHANGELOG.md"
+            exit 1
+          fi
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+
+      - name: Create draft release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ github.ref_name }}
+          name: Release ${{ steps.notes.outputs.version }}
+          body_path: release_notes.md
+          draft: true
