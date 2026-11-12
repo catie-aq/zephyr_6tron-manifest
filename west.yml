@@ -146,7 +146,7 @@ manifest:
       path: 6tron/drivers/lltc_ltc2311-16
     - name: maxim_max17201
       repo-path: zephyr_maxim-max17201
-      revision: 06314deebf09a30ad802fb39f3e617fd7b475db1
+      revision: 9034c7a00611ad583e43de5d5c41134a2b887be4
       path: 6tron/drivers/maxim_max17201
     - name: microchip_mcp3425
       repo-path: zephyr_microchip-mcp3425
