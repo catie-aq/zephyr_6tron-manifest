@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [4.5.0+202611] - 20261112
+
 ### Added
 
 - Add support for `Zest_Sensor_IMU` versions 1.0.2, 3.0.0, 3.1.0 and 4.0.0.
@@ -12,6 +14,25 @@
 - Rename `I2C1` pins to `I2C` in `sixtron-bus` connector.
 - Fix I2C communication in `st-stsafe-a1xx` driver.
 - Pin `STSELib` revision to a fixed commit in `st-stsafe-a1xx` driver.
+- Move ADC clock configuration (`st,adc-clock-source`, `st,adc-prescaler`) to the ADC common node for STM32 boards:
+    - Zest_Core_FMLR-72
+    - Zest_Core_MTXDOT
+    - Zest_Core_STM32G474VE
+    - Zest_Core_STM32H753ZI
+    - Zest_Core_STM32L4A6RG
+    - Zest_Core_STM32L562VE
+- Select LPTIM1 as system timer with the `zephyr,system-timer` chosen property for `Zest_Core_FMLR-72`.
+- Declare driver API structures with `DEVICE_API()` for the following drivers:
+    - Bosch BNO055
+    - Honeywell HPMA115
+    - Maxim MAX17201
+    - Microchip MCP3425
+    - Microcrystal RV-8803
+    - Quectel L86
+    - TE Connectivity HTU21D
+- Fix UART ISR for `uart_irq_update()` returning `void` in `Honeywell HPMA115` driver.
+- Use unit-suffixed fuel gauge properties in `Maxim MAX17201` driver.
+- Support Zephyr OS 4.5.0.
 
 ## [4.4.0+202606] - 20260618
 
@@ -223,3 +244,4 @@ _Initial release._
 [4.3.0+202511]: https://github.com/catie-aq/zephyr_6tron-manifest/releases/tag/v4.3.0+202511
 [4.4.0+202605]: https://github.com/catie-aq/zephyr_6tron-manifest/releases/tag/v4.4.0+202605
 [4.4.0+202606]: https://github.com/catie-aq/zephyr_6tron-manifest/releases/tag/v4.4.0+202606
+[4.5.0+202611]: https://github.com/catie-aq/zephyr_6tron-manifest/releases/tag/v4.5.0+202611
